@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 15</title>
+    <style>
+
+
+        body{
+            text-align: center;
+            box-sizing: border-box;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container{
+            
+            border: 3px solid black;
+            max-width: 300px;
+            
+            margin: auto;
+            background-color:rgb(71, 71, 71);
+            box-shadow: 3px 3px 5px white,-3px -3px 5px white;
+            
+        }
+
+        form{
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        form input{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 8px;
+            margin: 0;
+            padding: 12px;
+            border: none;
+            box-shadow: 2px 2px 5px 2px black;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: right;
+
+        }
+
+        .sub_container{
+            display: flex;
+        }
+
+        h1{
+            color: white;
+            background-color: black;
+            margin: 0;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .sub_container button{
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 1px;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            flex-grow: 1;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            box-shadow: 2px 2px 2px white,-2px -2px 2px white;
+        }
+
+        .sub_container button:hover{
+            background: linear-gradient(black,white);
+            border: none;
+            /* margin: 0; */
+            transition: 0.5s;
+        }
+
+        #Fourth_container :nth-child(1){
+            flex-grow: 4.2;
+        }
+
+        #Fourth_container :nth-child(2){
+            flex-grow: 1;
+        }
+
+        #Fifth_container button:nth-child(1){
+            background: linear-gradient(red , orangered);
+            border: none;
+            transition: opacity .35s ease-in-out;
+        }
+
+        #Fifth_container button:nth-child(2){
+            background: linear-gradient(green , rgb(154, 248, 3));
+            border: none;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <p id="para"></p>
+    <button onclick="set_para()">Add</button> -->
+
+    <div id="container">
+        <h1>Calculator</h1>
+        <form action="">
+            
+            <input id="inp" type="text" value="">
+        </form>
+        <div class="sub_container" id="First_container">
+            <button onclick="getNumber('7')">7</button>
+            <button onclick="getNumber('8')">8</button>
+            <button onclick="getNumber('9')">9</button>
+            <button onclick="getNumber('*')">x</button>
+            
+        </div>
+        <div class="sub_container" id="Second_container">
+            <button onclick="getNumber('4')">4</button>
+            <button onclick="getNumber('5')">5</button>
+            <button onclick="getNumber('6')">6</button>
+            <button onclick="getNumber('-')">-</button>
+        </div>
+        <div class="sub_container" id="Third_container">
+            <button onclick="getNumber('1')">1</button>
+            <button onclick="getNumber('2')">2</button>
+            <button onclick="getNumber('3')">3</button>
+            <button onclick="getNumber('+')">+</button>
+        </div>
+        <div class="sub_container" id="Fourth_container">
+            <button onclick="getNumber('0')">0</button>
+            <button onclick="getNumber('/')">/</button>
+        </div>
+        <div class="sub_container" id="Fifth_container">
+            <button onclick="clearInput()">C</button>
+            <button onclick="getResult()">=</button>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
